@@ -19,39 +19,50 @@
 
 #faq {
 	background: #004c94;
-	color: black;
-	padding: 3.5em 0 4em 0;
-	text-align: center;
 }
 
-.box.special.faq{
+.qa{
+	margin: 30px;
+	width: 25%;
 	text-align: justify;
-}
-
-.row.faq{
-	margin-left:auto;
-	/*margin-right: auto;*/
+	color: black;
+	background-color: white;
+	border-radius: 5px;
+	padding: 20px 20px 20px 20px;
+	
 }
 
 html{
 	scroll-behavior: smooth;
 }
 
+.divFaq{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+
+@media screen and (max-width: 1000px){
+	.qa{
+		width: 33%;
+	}
+}
+
+@media screen and (max-width: 675px){
+	.qa{
+		width: 75%;
+	}
+}
+
+
 .info-box{
 	width: 100%;
 	justify-content: center;
 	overflow: auto;
 }
-.what{
-	width:40%;
-	float: left;
-	padding-left: 2em;
-	text-align: justify;
-}
-.why{
-	width: 40%;
-	float:right;
-	padding-right: 2em;
+
+.question{
 	text-align: justify;
 }
 
@@ -62,6 +73,13 @@ html{
 	margin-top: auto;
 	margin-bottom: auto;
 }
+
+.padded{
+	padding-left: 3em !important;
+	padding-right: 3em !important;
+}
+
+
 
 
 /* Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain) */
