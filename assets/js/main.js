@@ -32,7 +32,7 @@
 		$('#nav > ul').dropotron({
 			alignment: 'right'
 		});
-
+/*
 	// NavPanel.
 
 		// Button.
@@ -41,7 +41,7 @@
 					'<a href="#navPanel" class="toggle"></a>' +
 				'</div>'
 			)
-				.appendTo($body);
+				.appendTo($body);*/
 
 		// Panel.
 			$(

@@ -17,20 +17,57 @@
 }
 */
 
+.headlineSponsor{
+	width:100%;
+	
+}
+
+.sponsor{
+	width: 75%;
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.rowSponsor{
+	display: flex;
+}
+
+.sponsor a{
+	border: none;
+}
+
+.adContainer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+
 #faq {
 	background: #004c94;
+	max-width: none;
+	padding: 2em 2em 2em 2em;
+}
+
+#info{
+	background: #004c94;
+	max-width: none;
+	width: 100%;
+	padding: 2em 2em 2em 2em;
 }
 
 .qa{
 	margin: 30px;
 	width: 25%;
-	text-align: justify;
+	text-align: center;
 	color: black;
 	background-color: white;
 	border-radius: 5px;
 	padding: 20px 20px 20px 20px;
-	
+	box-shadow: 5px 10px #00284d;
 }
+
 
 html{
 	scroll-behavior: smooth;
@@ -43,8 +80,37 @@ html{
 	align-content: center;
 }
 
+.question p{
+	font-size: large;
+}
+
+
+#info-box{
+	width: 100%;
+	justify-content: center;
+	background: #004c94;
+	color:black;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.question{
+	background: white;
+	width: 40%;
+}
+
+
+
+#title{
+	width: 100%;
+}
+
 @media screen and (max-width: 1000px){
 	.qa{
+		width: 33%;
+	}
+
+	.question{
 		width: 33%;
 	}
 }
@@ -53,32 +119,15 @@ html{
 	.qa{
 		width: 75%;
 	}
+	.question{
+		width: 75%;
+	}
 }
 
-
-.info-box{
-	width: 100%;
-	justify-content: center;
-	overflow: auto;
+.map{
+	padding: 2em 2em 2em 2em;
+	background: #004c94;
 }
-
-.question{
-	text-align: justify;
-}
-
-.sponsor{
-	width: 75%;
-}
-.dsponsor{
-	margin-top: auto;
-	margin-bottom: auto;
-}
-
-.padded{
-	padding-left: 3em !important;
-	padding-right: 3em !important;
-}
-
 
 
 
@@ -196,7 +245,7 @@ html{
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #e89980;
+		color: #004c94;
 		text-decoration: none;
 	}
 
@@ -279,6 +328,10 @@ html{
 
 		hr.major {
 			margin: 3em 0;
+		}
+
+		hr.minor {
+			margin: 1em 0;
 		}
 
 	blockquote {
@@ -2124,6 +2177,7 @@ html{
 
 		header.major h2 {
 			margin: 0;
+			color:white;
 		}
 
 		header.major p {
@@ -3004,7 +3058,8 @@ html{
 	}
 
 	#header {
-		background: #444;
+		/*background: #444;*/
+		background: black;
 		color: #bbb;
 		cursor: default;
 		height: 3.25em;
@@ -3452,7 +3507,7 @@ html{
 		/* Banner */
 
 			#banner {
-				padding: 10em 0 18em 0;
+				padding: 10em 0 25em 0;
 			}
 
 	}
@@ -3659,7 +3714,8 @@ html{
 				top: 0;
 				width: 275px;
 				z-index: 10002;
-				background: #2b2b2b;
+				/*background: #2b2b2b;*/
+				background: #001a33;
 				color: #bbb;
 			}
 
