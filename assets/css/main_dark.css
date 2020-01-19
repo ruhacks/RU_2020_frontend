@@ -16,7 +16,6 @@
 	height: 25%;
 }
 */
-
 #headerElements{
 	display: flex;
 }
@@ -27,21 +26,27 @@
 	margin-left: 5em;
 }
 
+
 #navLogo{
 	height: 50px;
 	width: 50px;
 }
 
-@media screen and (max-width: 850px){
-	#imgHeader{
-		margin: 0 auto;
-	}
+@media screen and (max-width:838px){
+    #imgHeader{
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:850px){
+    #imgHeader{
+        margin-left: 3.33em;
+    }
 }
 
 #headerNav{
     display: flex;
 }
-
 
 .headlineSponsor{
 	width:100%;
@@ -67,9 +72,20 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-content: center;
-	width: 80%;
-	margin: 0 auto;
+    align-content: center;
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px){
+    .adContainer{
+        width: 100%;
+    }
+}
+
+.sponsorContainer{
+    text-align: center;
 }
 /*#004c94*/
 #faq {
@@ -87,7 +103,7 @@
 	margin: 30px;
 	width: 25%;
 	text-align: center;
-	color: white;
+	color: #e6f3ff;
 	background-color: #004c94;
 	border-radius: 5px;
 	padding: 20px 20px 20px 20px;
@@ -96,7 +112,7 @@
 }
 
 .qa h3{
-	color: white;
+	color: #e6f3ff;
 }
 
 .qa p{
@@ -181,7 +197,6 @@ html{
 iframe{
 	box-shadow: 16px 13px #ffdc00;
 }
-
 
 
 /* Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain) */
@@ -280,7 +295,7 @@ iframe{
 	}
 
 	body {
-		background: #f5f5f5;
+		background: #141414;
 	}
 
 	body, input, select, textarea {
@@ -321,7 +336,7 @@ iframe{
 
 	h1, h2, h3, h4, h5, h6 {
 		/*color: #646464;*/
-		color: #000d1a;
+		color: #e6f3ff;
 		font-weight: 300;
 		line-height: 1em;
 		margin: 0 0 0.5em 0;
@@ -3114,8 +3129,8 @@ iframe{
 
 	#header {
 		/*background: #444;*/
-		background: #003566;
-		/*background: #0069cc;*/
+        /*background: #001a33;*/
+        background: #001a33;
 		color: #bbb;
 		cursor: default;
 		height: 3.25em;
@@ -3347,7 +3362,7 @@ iframe{
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		background-image: url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), url("../../images/banner_dark.jpg");
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
@@ -3440,7 +3455,7 @@ iframe{
 /* Footer */
 
 	#footer {
-		background: #f0f0f0;
+		background: #141414;
 		padding: 4em 0 6em 0;
 		text-align: center;
 	}
@@ -3615,7 +3630,7 @@ iframe{
 		display: none;
 	}
 
-	@media screen and (max-width: 850px) {
+	@media screen and (max-width: 840px) {
 
 		/* Basic */
 

@@ -9,26 +9,37 @@
 		var	$this = $(this);
 			$a = $this.find('a'),
 			b = [];
+			b.push("<div id ='imgHeader'><img class = 'logo' id='navLogo' src='images/logo50_white.png'></img></div>");
 
 		$a.each(function() {
 
 			var	$this = $(this),
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
-				target = $this.attr('target');
+				target = $this.attr('target'),
+				onClickEvent = $this.attr("onclick"),
+				identification = $this.attr("id"),
+				chosenTheme = $this.attr("chosen");
 
 			b.push(
 				'<a ' +
 					'class="link depth-' + indent + '"' +
 					( (typeof target !== 'undefined' && target != '') ? ' target="' + target + '"' : '') +
 					( (typeof href !== 'undefined' && href != '') ? ' href="' + href + '"' : '') +
+					( (typeof onClickEvent !== 'undefined' && onClickEvent != '') ? ' onClick="' + onClickEvent + '"' : '') +
+					( (typeof identification !== 'undefined' && identification != '') ? ' id="' + identification + '"' : '') +
+					( (typeof chosenTheme !== 'undefined' && chosenTheme != '') ? ' chosen="' + chosenTheme + '"' : '') +
 				'>' +
 					'<span class="indent-' + indent + '"></span>' +
 					$this.text() +
 				'</a>'
 			);
+			
 
 		});
+		b.push('<hr><a id="mlh-trust-badge" style="display:block;margin: 0 auto;max-width:100px;min-width:60px;top:0;width:10%;z-index:10000;border:none" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=blue" target="_blank">'+
+		'<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-blue.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%">'+
+		'</a>');
 
 		return b.join('');
 

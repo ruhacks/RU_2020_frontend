@@ -4,6 +4,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+var themeState = 1;
+
 (function($) {
 
 	var	$window = $(window),
@@ -16,7 +18,7 @@
 			wide:      ( '1281px',  '1680px' ),
 			normal:    ( '981px',   '1280px' ),
 			narrow:    ( '737px',   '980px'  ),
-			narrower:  ( '737px',   '840px'  ),
+			narrower:  ( '737px',   '850px'  ),
 			mobile:    ( '481px',   '736px'  ),
 			mobilep:   ( null,      '480px'  )
 		});
@@ -32,7 +34,7 @@
 		$('#nav > ul').dropotron({
 			alignment: 'right'
 		});
-/*
+
 	// NavPanel.
 
 		// Button.
@@ -41,12 +43,13 @@
 					'<a href="#navPanel" class="toggle"></a>' +
 				'</div>'
 			)
-				.appendTo($body);*/
+				.appendTo($body);
 
 		// Panel.
+		
 			$(
 				'<div id="navPanel">' +
-					'<nav>' +
+					'<nav id="navNav">' +
 						$('#nav').navList() +
 					'</nav>' +
 				'</div>'
@@ -62,6 +65,8 @@
 					target: $body,
 					visibleClass: 'navPanel-visible'
 				});
+				
+				
 
 	// Header.
 		if (!browser.mobile
@@ -83,3 +88,35 @@
 
 })(jQuery);
 
+determineThemeState();
+function determineThemeState(){
+	var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	if(cookieValue == "light"){
+		$("#themeBut").attr("chosen", "l");
+		$("img[id='navLogo']").attr("src", "images/logo50_white.png");
+	}else if(cookieValue == "dark"){
+		$("#themeBut").attr("chosen", "d");
+		$("img[id='navLogo']").attr("src", "images/logo50_blue.png");
+	}else{
+		var expiry = new Date();
+		expiry = date.setTime(date.getTime() + (days*24*60*60*1000));
+		document.cookie = "theme=light;";
+		document.cookie = "expires="+expiry.toUTCString();
+	}
+}
+
+function changeThemeState(){
+	var chosen = $("#themeBut").attr("chosen");
+	if(chosen == "l"){
+		$("a[id='themeBut']").attr("chosen", "d");
+		document.cookie = "theme=dark;";
+		$("#theme").attr("href", "assets/css/main_dark.css");
+		$("img[id='navLogo']").attr("src", "images/logo50_blue.png");
+	}else if(chosen == "d"){
+		$("a[id='themeBut']").attr("chosen", "l");
+		document.cookie = "theme=light;";
+		$("#theme").attr("href", "assets/css/main.css");
+		$("img[id='navLogo']").attr("src", "images/logo50_white.png");
+	}
+
+}
