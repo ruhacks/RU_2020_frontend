@@ -43,15 +43,13 @@
 	justify-content: center;
 	align-content: center;
 }
-
+/*#004c94*/
 #faq {
-	background: #004c94;
 	max-width: none;
 	padding: 2em 2em 2em 2em;
 }
 
 #info{
-	background: #004c94;
 	max-width: none;
 	width: 100%;
 	padding: 2em 2em 2em 2em;
@@ -61,11 +59,20 @@
 	margin: 30px;
 	width: 25%;
 	text-align: center;
-	color: black;
-	background-color: white;
+	color: white;
+	background-color: #004c94;
 	border-radius: 5px;
 	padding: 20px 20px 20px 20px;
-	box-shadow: 5px 10px #00284d;
+	box-shadow: 16px 13px #ffdc00;
+
+}
+
+.qa h3{
+	color: white;
+}
+
+.qa p{
+	font-size: large;
 }
 
 
@@ -80,22 +87,18 @@ html{
 	align-content: center;
 }
 
-.question p{
-	font-size: large;
-}
 
 
 #info-box{
 	width: 100%;
 	justify-content: center;
-	background: #004c94;
 	color:black;
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .question{
-	background: white;
+	background: #004c94;
 	width: 40%;
 }
 
@@ -124,9 +127,14 @@ html{
 	}
 }
 
-.map{
-	padding: 2em 2em 2em 2em;
-	background: #004c94;
+#map{
+	height: 20em;
+	text-align: center;
+	
+}
+
+iframe{
+	box-shadow: 16px 13px #ffdc00;
 }
 
 
@@ -245,7 +253,7 @@ html{
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #004c94;
+		color: white;
 		text-decoration: none;
 	}
 
@@ -267,10 +275,12 @@ html{
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #646464;
+		/*color: #646464;*/
+		color: #000d1a;
 		font-weight: 300;
 		line-height: 1em;
 		margin: 0 0 0.5em 0;
+		font-weight: 350;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2177,7 +2187,7 @@ html{
 
 		header.major h2 {
 			margin: 0;
-			color:white;
+
 		}
 
 		header.major p {
@@ -3059,7 +3069,7 @@ html{
 
 	#header {
 		/*background: #444;*/
-		background: black;
+		background: #001a33;
 		color: #bbb;
 		cursor: default;
 		height: 3.25em;
