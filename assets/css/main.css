@@ -28,11 +28,13 @@
 #topLeftTitle{
 	max-height: 50px;
 	border: none;
+	margin-top: -0.5em;
 }
 
 #imgHeader{
     width: fit-content;
 	display: flex;
+	height: 50px;
 }
 
 #navLogo{
@@ -190,6 +192,11 @@ html{
 iframe{
 	box-shadow: 16px 13px #ffdc00;
 }
+
+#map img{
+	box-shadow: 16px 13px #ffdc00;
+}
+
 
 
 
@@ -3568,9 +3575,10 @@ iframe{
 			body, input, select, textarea {
 				font-size: 13pt;
 			}
+			#topLeftTitle{
+				margin-top: -0.3em;
+			}
 			
-			
-
 		/* Banner */
 
 			#banner {
@@ -3594,6 +3602,10 @@ iframe{
 
 			.dropotron.level-0 {
 				font-size: 1em;
+			}
+
+			#topLeftTitle{
+				margin: 0 auto;
 			}
 
 		/* Banner */

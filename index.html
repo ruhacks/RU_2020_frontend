@@ -34,7 +34,7 @@
 		<meta name="twitter:description" content="RU Hacks 2019, Ryerson University's hackathon.">
 		<meta name="twitter:image" content="https://2018.ruhacks.com/img/og_twitter/splash_960x540.png?20180330">
 		<meta name="twitter:image:alt" content="RU Hacks happening in Spring 2019">
-		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" type = 'text/css' href="assets/css/aos.css" />
 		<link rel="stylesheet" type = 'text/css' href="assets/css/main.css" id="theme">
 		<script>
 			var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
@@ -60,7 +60,7 @@
 							
 							<a href='index.html' id="topLeftTitle">RU Hacks</a>
 							<div id ="imgHeader">
-								<img class = 'logo' id='navLogo' src='images/logo50_white.png'></img>
+								<a href = "index.html" style="border:none" ><img class = 'logo' id='navLogo' src='images/logo50_white.png'></a>
 							</div>	
 						</div>
 					</div>
@@ -201,7 +201,8 @@
 				<br>
 				<section class = 'location' data-aos="zoom-in">
 					<div id ='map'>	
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19415.572785949436!2d-79.39407270275663!3d43.66601311698041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb359d1515e7%3A0xfec6b680ae45e7b0!2sGeorge%20Vari%20Engineering%20and%20Computing%20Centre!5e0!3m2!1sen!2sca!4v1579418155666!5m2!1sen!2sca" style="border: none; height: 100%; width: 80%;"></iframe>
+						<!--<iframe id = "iframeMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19415.572785949436!2d-79.39407270275663!3d43.66601311698041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb359d1515e7%3A0xfec6b680ae45e7b0!2sGeorge%20Vari%20Engineering%20and%20Computing%20Centre!5e0!3m2!1sen!2sca!4v1579418155666!5m2!1sen!2sca" style="border: none; height: 100%; width: 80%;"></iframe>-->
+						<img src="images/map.png" id="mapImg" style="border: none; height: 100%; width: 80%;">
 					</div>
 				</section>
 
@@ -368,7 +369,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js?1500"></script>
 			<script src="assets/js/main.js?1500"></script>
-			<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+			<script src="assets/js/aos.js"></script>
 			<script>
 				AOS.init();
 			</script>
