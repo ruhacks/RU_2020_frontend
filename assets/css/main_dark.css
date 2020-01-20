@@ -16,37 +16,40 @@
 	height: 25%;
 }
 */
+#navButtons{
+	display: flex;
+}
+
 #headerElements{
 	display: flex;
+}
+
+#topLeftTitle{
+	max-height: 50px;
+	border: none;
 }
 
 #imgHeader{
     width: fit-content;
 	display: flex;
-	margin-left: 5em;
 }
-
 
 #navLogo{
 	height: 50px;
 	width: 50px;
 }
 
-@media screen and (max-width:838px){
-    #imgHeader{
-        margin: 0 auto;
-    }
-}
-
-@media screen and (max-width:850px){
-    #imgHeader{
-        margin-left: 3.33em;
-    }
+@media screen and (max-width: 850px){
+	#imgHeader{
+		margin: 0 auto;
+	}
 }
 
 #headerNav{
-    display: flex;
+	display: flex;
+	margin-left: 1em;
 }
+
 
 .headlineSponsor{
 	width:100%;

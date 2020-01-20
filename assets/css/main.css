@@ -17,14 +17,22 @@
 }
 */
 
+#navButtons{
+	display: flex;
+}
+
 #headerElements{
 	display: flex;
+}
+
+#topLeftTitle{
+	max-height: 50px;
+	border: none;
 }
 
 #imgHeader{
     width: fit-content;
 	display: flex;
-	margin-left: 5em;
 }
 
 #navLogo{
@@ -39,7 +47,8 @@
 }
 
 #headerNav{
-    display: flex;
+	display: flex;
+	margin-left: 1em;
 }
 
 
@@ -3559,6 +3568,8 @@ iframe{
 			body, input, select, textarea {
 				font-size: 13pt;
 			}
+			
+			
 
 		/* Banner */
 
