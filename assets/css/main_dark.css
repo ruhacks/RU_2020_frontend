@@ -35,8 +35,8 @@
 }
 
 #navLogo{
-	height: 50px;
-	width: 50px;
+	height: 70px;
+	width: 70px;
 }
 
 @media screen and (max-width: 850px){
@@ -138,6 +138,19 @@
 	}
 }
 
+#banner_content{
+	margin-top: -3em;
+}
+
+@media screen and (max-width: 736px){
+	#banner_content{
+		margin-top: -8em;
+	}
+}
+#bannerLogo{
+	width:150px;
+	height:150px;
+}
 
 
 html{
@@ -199,6 +212,13 @@ html{
 
 iframe{
 	box-shadow: 16px 13px #ffdc00;
+}
+
+#themeBut:active{
+	background-color: #004c94;
+	-webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
 }
 
 
@@ -3365,7 +3385,7 @@ iframe{
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		background-image: url("images/overlay.png"), url("../../images/banner_dark.jpg");
+		background-image: url("images/overlay.png"), url("../../images/banner.png");
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
@@ -3385,13 +3405,13 @@ iframe{
 		#banner h2 {
 			font-size: 3.5em;
 			line-height: 1em;
-			margin: 0 0 0.5em 0;
+			margin: 0 0 0.25em 0;
 			padding: 0;
 		}
 
 		#banner p {
 			font-size: 1.25em;
-			margin-bottom: 1.75em;
+			margin-bottom: 0.75em;
 		}
 
 		#banner input[type="submit"],
@@ -3595,6 +3615,10 @@ iframe{
 
 			body, input, select, textarea {
 				font-size: 11pt;
+			}
+
+			#topLeftTitle{
+				margin: 0 auto;
 			}
 
 		/* Header */

@@ -33,11 +33,23 @@
 #imgHeader{
     width: fit-content;
 	display: flex;
+	height: 50px;
 }
 
 #navLogo{
-	height: 50px;
-	width: 50px;
+	height: 70px;
+	width: 70px;
+}
+
+@media screen and (max-width: 1680px){
+	#navLogo{
+		height: 50px;
+		width: 50px;
+	}
+	#topLeftTitle{
+		margin-top: -0.5em;
+	}
+	
 }
 
 @media screen and (max-width: 850px){
@@ -45,6 +57,8 @@
 		margin: 0 auto;
 	}
 }
+
+
 
 #headerNav{
 	display: flex;
@@ -191,6 +205,24 @@ iframe{
 	box-shadow: 16px 13px #ffdc00;
 }
 
+#map img{
+	box-shadow: 16px 13px #ffdc00;
+}
+
+#banner_content{
+	margin-top: -3em;
+}
+
+@media screen and (max-width: 736px){
+	#banner_content{
+		margin-top: -6em;
+	}
+}
+
+#bannerLogo{
+	width:150px;
+	height:150px;
+}
 
 
 /* Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain) */
@@ -3356,13 +3388,14 @@ iframe{
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		background-image: url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), url("../../images/banner.png");
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
 		color: #fff;
 		padding: 12em 0 20em 0;
 		text-align: center;
+		background-position: 30%;
 	}
 
 		#banner :last-child {
@@ -3376,13 +3409,13 @@ iframe{
 		#banner h2 {
 			font-size: 3.5em;
 			line-height: 1em;
-			margin: 0 0 0.5em 0;
+			margin: 0 0 0.25em 0;
 			padding: 0;
 		}
 
 		#banner p {
 			font-size: 1.25em;
-			margin-bottom: 1.75em;
+			margin-bottom: 0.75em;
 		}
 
 		#banner input[type="submit"],
@@ -3568,9 +3601,10 @@ iframe{
 			body, input, select, textarea {
 				font-size: 13pt;
 			}
+			#topLeftTitle{
+				margin-top: -0.3em;
+			}
 			
-			
-
 		/* Banner */
 
 			#banner {
@@ -3594,6 +3628,10 @@ iframe{
 
 			.dropotron.level-0 {
 				font-size: 1em;
+			}
+
+			#topLeftTitle{
+				margin: 0 auto;
 			}
 
 		/* Banner */
