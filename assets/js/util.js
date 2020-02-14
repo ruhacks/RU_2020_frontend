@@ -37,9 +37,9 @@
 			
 
 		});
-		b.push('<hr><a id="mlh-trust-badge" style="display:block;margin: 0 auto;max-width:100px;min-width:60px;top:0;width:10%;z-index:10000;border:none" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=blue" target="_blank">'+
+		/*b.push('<hr><a id="mlh-trust-badge" style="display:block;margin: 0 auto;max-width:100px;min-width:60px;top:0;width:10%;z-index:10000;border:none" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=blue" target="_blank">'+
 		'<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-blue.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%">'+
-		'</a>');
+		'</a>');*/
 
 		return b.join('');
 

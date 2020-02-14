@@ -33,7 +33,6 @@
 #imgHeader{
     width: fit-content;
 	display: flex;
-	height: 50px;
 }
 
 #navLogo{
@@ -42,10 +41,6 @@
 }
 
 @media screen and (max-width: 1680px){
-	#navLogo{
-		height: 50px;
-		width: 50px;
-	}
 	#topLeftTitle{
 		margin-top: -0.5em;
 	}
@@ -3784,7 +3779,7 @@ iframe{
 					}
 
 					#navButton .toggle:before {
-						background: rgba(192, 192, 192, 0.75);
+						/*background: rgba(192, 192, 192, 0.75);*/
 						border-radius: 6px;
 						color: #fff;
 						content: '\f0c9';
