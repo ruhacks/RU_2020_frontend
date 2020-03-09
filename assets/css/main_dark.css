@@ -20,27 +20,18 @@
 #themeBut{
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.8);
-	/*background: #004c94;*/
-	background-color: transparent;
+	background: #004c94;
 	padding: 15px 40px;
 	border-radius: 6px;
 	font-weight: normal;
-	transition: all 0.2s ease-in-out;
-	/*box-shadow: 0 0 18px rgba(114, 211, 228, 0.8);*/
-	box-shadow: 0 0 20px rgba(114, 211, 228, 1);
-	/*box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);*/
-	border-style: solid;
-	border-color: rgba(255, 255, 255, 0.5);
-	border-width: 3px;
+	box-shadow: 0 0 15px #ffdc00;
 	cursor: pointer;
 }
 
-
-
 #themeBut:hover{
-	color: rgba(255, 255, 255, 1);
- 	box-shadow: 0 0px 25px #ffdd00ad;
+	box-shadow: 0 0 21px #ffdc00;
 }
+
 
 #navButtons{
 	display: flex;
@@ -177,7 +168,6 @@
 #bannerLogo{
 	width:150px;
 	height:150px;
-	box-shadow: 0 0 20px rgba(114, 211, 228, 1);
 }
 
 
@@ -3620,6 +3610,10 @@ iframe{
 
 	@media screen and (max-width: 1680px) {
 
+		#navLogo{
+			margin-top: 0%;
+		}
+
 		/* Basic */
 
 			body, input, select, textarea {
@@ -3805,9 +3799,9 @@ iframe{
 					}
 
 					#navButton .toggle:before {
-						/*background: rgba(192, 192, 192, 0.75);*/
+						background: rgba(24, 24, 60, 0.75);
 						border-radius: 6px;
-						color: #fff;
+						color: rgb(82,168,183);
 						content: '\f0c9';
 						display: block;
 						font-size: 16px;

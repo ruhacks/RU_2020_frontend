@@ -24,11 +24,14 @@
 	padding: 15px 40px;
 	border-radius: 6px;
 	font-weight: normal;
-	transition: all 0.2s ease-in-out;
-	box-shadow: 0 0 15px rgba(114, 211, 228, 0.8);
-	border-top: 10px;
+	box-shadow: 0 0 15px #ffdc00;
 	cursor: pointer;
 }
+
+#themeBut:hover{
+	box-shadow: 0 0 21px #ffdc00;
+}
+
 
 #navButtons{
 	display: flex;
@@ -52,13 +55,6 @@
 	height: 50px;
 	width: 50px;
 	margin-top: 17%;
-}
-
-@media screen and (min-width: 1510px){
-	#navLogo{
-		margin-top: 0%;
-	}
-	
 }
 
 
@@ -3606,6 +3602,10 @@ iframe{
 
 	@media screen and (max-width: 1680px) {
 
+		#navLogo{
+			margin-top: 0%;
+		}
+
 		/* Basic */
 
 			body, input, select, textarea {
@@ -3794,9 +3794,9 @@ iframe{
 					}
 
 					#navButton .toggle:before {
-						/*background: rgba(192, 192, 192, 0.75);*/
+						background: #ffdc00;
 						border-radius: 6px;
-						color: #fff;
+						color: #004c94;
 						content: '\f0c9';
 						display: block;
 						font-size: 16px;
