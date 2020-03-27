@@ -120,13 +120,13 @@ function changeThemeState(){
 	}
 
 }
-
+/*
 function embedMap(){
 	if($("#iframeMap").length ==0){
 		$("#map").append('<iframe id = "iframeMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19415.572785949436!2d-79.39407270275663!3d43.66601311698041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb359d1515e7%3A0xfec6b680ae45e7b0!2sGeorge%20Vari%20Engineering%20and%20Computing%20Centre!5e0!3m2!1sen!2sca!4v1579418155666!5m2!1sen!2sca" style="border: none; height: 100%; width: 80%;"></iframe>')
 		$("#mapImg").remove();
 	}
-}
+}*/
 
 	/*!
  * Determine if an element is in the viewport
@@ -134,6 +134,8 @@ function embedMap(){
  * @param  {Node}    elem The element
  * @return {Boolean}      Returns true if element is in the viewport
  */
+
+ /*
 var isInViewport = function (elem) {
 	var distance = elem.getBoundingClientRect();
 	return (
@@ -151,4 +153,4 @@ window.addEventListener('scroll', function (event) {
 		embedMap();
 		$("#mapImg").remove();
 	}
-}, false);
+}, false);*/
