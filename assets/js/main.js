@@ -110,12 +110,12 @@ function changeThemeState(){
 	if(chosen == "l"){
 		$("a[id='themeBut']").attr("chosen", "d");
 		document.cookie = "theme=dark;";
-		$("#theme").attr("href", "assets/css/main_dark.css");
+		$("#theme").attr("href", "assets/css/main_dark.css?v=3");
 		$("img[id='navLogo']").attr("src", "images/RU_White_RU.png").attr("alt", "RU Hacks");
 	}else if(chosen == "d"){
 		$("a[id='themeBut']").attr("chosen", "l");
 		document.cookie = "theme=light;";
-		$("#theme").attr("href", "assets/css/main.css");
+		$("#theme").attr("href", "assets/css/main.css?v=3");
 		$("img[id='navLogo']").attr("src", "images/RU_White_RU.png").attr("alt", "RU Hacks");
 	}
 
