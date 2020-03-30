@@ -17,17 +17,16 @@
 }
 */
 
-#themeBut{
+.themeBut{
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.8);
-	background: #0077e6;
+	background: #004c94;
 	padding: 15px 40px;
+	border:none;
 	border-radius: 6px;
 	font-weight: normal;
 	cursor: pointer;
-	border: none;
 }
-
 .yellow{
 	box-shadow: 0 0 15px #ffdc00;
 }
@@ -42,6 +41,22 @@
 
 .pink:hover{
 	box-shadow: 0 0 21px #CA0041;
+}
+
+@media screen and (max-width: 450px){
+	.themeBut{
+		font-weight: bold;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+	#hackers{
+		top: 5em;
+	}
+	#divButtonsBelow{
+		position: relative;
+	}
 }
 
 #navButtons{
