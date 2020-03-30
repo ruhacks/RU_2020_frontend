@@ -1,0 +1,19 @@
+@-webkit-keyframes fadeblueyellow {
+    0%{background-position:0% 48%}
+    50%{background-position:100% 53%}
+    100%{background-position:0% 48%}
+}
+@-moz-keyframes fadeblueyellow {
+    0%{background-position:0% 48%}
+    50%{background-position:100% 53%}
+    100%{background-position:0% 48%}
+}
+@keyframes fadeblueyellow {
+    0%{background-position:0% 48%}
+    50%{background-position:100% 53%}
+    100%{background-position:0% 48%}
+}
+
+#center{
+    animation: fadeblueyellow 5s ease alternate infinite;
+}

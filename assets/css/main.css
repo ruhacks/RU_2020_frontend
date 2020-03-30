@@ -1,5 +1,5 @@
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic&display=swap");
 
 /*
 	Alpha by HTML5 UP
@@ -20,18 +20,29 @@
 #themeBut{
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.8);
-	background: #004c94;
+	background: #0077e6;
 	padding: 15px 40px;
 	border-radius: 6px;
 	font-weight: normal;
-	box-shadow: 0 0 15px #ffdc00;
 	cursor: pointer;
+	border: none;
 }
 
-#themeBut:hover{
+.yellow{
+	box-shadow: 0 0 15px #ffdc00;
+}
+
+.pink{
+	box-shadow: 0 0 15px #CA0041;
+}
+
+.yellow:hover{
 	box-shadow: 0 0 21px #ffdc00;
 }
 
+.pink:hover{
+	box-shadow: 0 0 21px #CA0041;
+}
 
 #navButtons{
 	display: flex;
@@ -3394,11 +3405,11 @@ iframe{
 	#banner {
 		background-attachment: scroll,							fixed;
 		background-color: #666;
-		background-image: url("images/overlay.png"), url("../../images/banner.svg");
+		background-image: url("images/overlay.png"), url("../../images/banner_daytime.svg");
 		background-position: top left,						center center;
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
-		color: #fff;
+		color: #001a31;
 		padding: 12em 0 20em 0;
 		text-align: center;
 		background-position: 30%;
@@ -3409,7 +3420,7 @@ iframe{
 		}
 
 		#banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
-			color: #fff;
+			color: #001a31;
 		}
 
 		#banner h2 {

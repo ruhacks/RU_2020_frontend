@@ -1,5 +1,5 @@
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic&display=swap");
 
 /*
 	Alpha by HTML5 UP
@@ -22,15 +22,27 @@
 	color: rgba(255, 255, 255, 0.8);
 	background: #004c94;
 	padding: 15px 40px;
+	border:none;
 	border-radius: 6px;
 	font-weight: normal;
-	box-shadow: 0 0 15px #ffdc00;
 	cursor: pointer;
 }
+.yellow{
+	box-shadow: 0 0 15px #ffdc00;
+}
 
-#themeBut:hover{
+.pink{
+	box-shadow: 0 0 15px #CA0041;
+}
+
+.yellow:hover{
 	box-shadow: 0 0 21px #ffdc00;
 }
+
+.pink:hover{
+	box-shadow: 0 0 21px #CA0041;
+}
+
 
 
 #navButtons{
@@ -3402,12 +3414,12 @@ iframe{
 /* Banner */
 
 	#banner {
-		background-attachment: scroll,							fixed;
+		background-attachment: scroll, fixed, fixed;
 		background-color: #666;
 		background-image: url("images/overlay.png"), url("../../images/banner.svg");
-		background-position: top left,						center center;
-		background-repeat: repeat,							no-repeat;
-		background-size: auto,							cover;
+		background-position: top left, center center, center center;
+		background-repeat: repeat, no-repeat, no-repeat;
+		background-size: auto, cover, cover;
 		color: #fff;
 		padding: 12em 0 20em 0;
 		text-align: center;
