@@ -104,7 +104,7 @@
 }
 
 .sponsor{
-	width: 75%;
+	width: 65%;
 	text-align: center;
 	margin-top: auto;
 	margin-bottom: auto;
@@ -112,6 +112,7 @@
 
 .rowSponsor{
 	display: flex;
+	width:100%;
 }
 
 .sponsor a{
@@ -123,7 +124,7 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 }
 /*#004c94*/

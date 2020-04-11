@@ -773,7 +773,7 @@
     </linearGradient>
     <linearGradient id="bToy_CN_bottom" x1="0" y1="-100%" x2="0" y2="200%" >
         <stop offset="0" stop-color="#004c94">
-            <animate id="an_1_blue" begin="10s" attributeName="offset" values="0;0.2;0.5" dur="4s" repeatCount="indefinite"  /> 
+            <animate id="an_1_blue" begin="10s" attributeName="offset" values="0%;20%;50%" dur="4s" repeatCount="indefinite"  /> 
         </stop>
         <stop offset="1" stop-color="yellow">
             <animate id="an_1_yellow" begin= "10s" attributeName="offset" values="0.5;0.7;0.8;1" dur="4s" repeatCount="indefinite"  /> 
