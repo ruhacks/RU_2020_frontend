@@ -51,6 +51,7 @@ var themeState = 1;
 				'<div id="navPanel">' +
 					'<nav id="navNav">' +
 						$('#nav').navList() +
+						'<a id="mlh-trust-badge" style="max-width:100px;min-width:60px;top:0;width:10%;z-index:10000;border:none" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=blue" target="_blank" rel="noopener"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-white.svg" alt="Major League Hacking 2020 Hackathon Season" style="height: 150px;width:100%"></a>' +
 					'</nav>' +
 				'</div>'
 			)
