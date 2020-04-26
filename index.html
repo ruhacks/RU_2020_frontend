@@ -36,6 +36,7 @@
 		<meta name="twitter:image:alt" content="RU Hacks happening in Spring 2020">
 		<link rel="stylesheet" type = 'text/css' href="assets/css/aos.css" />
 		<link rel="stylesheet" type = 'text/css' href="assets/css/main_dark.css?v=2" id="theme">
+		<!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
 		<script>
 			var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
 			var head = document.getElementsByTagName('HEAD')[0];
@@ -214,8 +215,36 @@
 						<img src="images/map.png" id="mapImg" style="border: none; height: 100%; width: 80%;">
 					</div>
 				</section>-->
+				<br><br>
 
-
+				
+				
+				<header class="major" data-aos="fade-up" data-aos-duration= "500">
+					<h2>Hackathon Timeline</h2>
+				</header>
+				
+				<!-- SCHEDULE SECTION -->
+				<!-- Make changes in Scripts.js for the schedule-->
+				<!--
+				<section class="schedule-section" id="sponsors" style="overflow-x: scroll;">
+				<div class="scheduleContainer">
+					<div class="row">
+					<h4>Schedule</h4>
+					</div>
+					<div id="chart_wrapper">
+					<div id="example5.2" style="height: 100%; width: 100%;"></div>
+					</div>
+					<div id='schedule-more-details'></div>
+				</div>
+				</section>-->
+				<div id ="calendar" style = "text-align: center;margin-bottom: 4em;">
+					
+					<iframe data-aos="fade-up" data-aos-duration= "500" id = 'gcal' zone = 'tz' src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%237986CB&amp;src=aHBndTg4MnIxYWVsYW0wMHAwcDE4ODg5NmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000&amp;mode=AGENDA&amp;title=RU%20Hacks&amp;showTitle=0&amp;showNav=0&amp;showDate=1&amp;showTabs=0&amp;showCalendars=0&amp;showTz=1&amp;ctz=America/Toronto" style="border:solid 1px #777" width="600" height="600" frameborder="0" scrolling="no"></iframe>
+					<br><br>
+					<div id="divButtonsBelow">
+						<a id="tzBut" data-aos="fade-up" data-aos-duration= "500" class="pink themeBut" onclick = 'changeTimeZone()'>Change to Hacakthon Time Zone (TORONTO/EST)</a>
+					</div>
+				</div>
 				<br><br>
 
 				<section class = "sponsorContainer">
@@ -456,9 +485,34 @@
 			<script src="assets/js/util.js?1500"></script>
 			<script src="assets/js/main.js?1500"></script>
 			<script src="assets/js/aos.js"></script>
+			<!--<script src="assets/js/timetable.js"></script>
+			<script src="assets/js/script.js"></script>-->
 			<link rel="stylesheet" type = 'text/css' src="assets/css/animate.css">
 			<script>
 				AOS.init();
+				const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+				const lz = "America/Toronto"
+				var srcText = "https://calendar.google.com/calendar/b/1/embed?height=600&wkst=1&bgcolor=%237986CB&src=aHBndTg4MnIxYWVsYW0wMHAwcDE4ODg5NmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000&mode=AGENDA&title=RU%20Hacks&showTitle=0&showNav=0&showDate=1&showTabs=0&showCalendars=0&showTz=1&ctz="+tz;
+
+				function changeTimeZone(){
+					if($("#gcal").attr("zone") == 'tz'){
+						var srcText = "https://calendar.google.com/calendar/b/1/embed?height=600&wkst=1&bgcolor=%237986CB&src=aHBndTg4MnIxYWVsYW0wMHAwcDE4ODg5NmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000&mode=AGENDA&title=RU%20Hacks&showTitle=0&showNav=0&showDate=1&showTabs=0&showCalendars=0&showTz=1&ctz="+lz;
+						$("#gcal").attr("src",srcText);
+						$("#gcal").attr("zone","lz");
+						$("#tzBut").text("Change to my local time zone");
+					}else{
+						var srcText = "https://calendar.google.com/calendar/b/1/embed?height=600&wkst=1&bgcolor=%237986CB&src=aHBndTg4MnIxYWVsYW0wMHAwcDE4ODg5NmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000&mode=AGENDA&title=RU%20Hacks&showTitle=0&showNav=0&showDate=1&showTabs=0&showCalendars=0&showTz=1&ctz="+tz;
+						$("#gcal").attr("src",srcText);
+						$("#gcal").attr("zone","tz");
+						$("#tzBut").text("Change to Hacakthon Time Zone (TORONTO/EST)");
+					}
+
+				}
+				//TODO
+				function setCalendarColors(){
+
+				}
+//src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%237986CB&amp;ctz=America%2FToronto&amp;src=aHBndTg4MnIxYWVsYW0wMHAwcDE4ODg5NmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000&amp;mode=AGENDA&amp;title=RU%20Hacks&amp;showTitle=0&amp;showNav=0&amp;showDate=1&amp;showTabs=0&amp;showCalendars=0&amp;showTz=1"
 			</script>
 
 	</body>
