@@ -34,7 +34,12 @@
 .pink{
 	box-shadow: 0 0 15px #CA0041;
 }
-
+.closed{
+	box-shadow: 0 0 15px rgb(255, 0, 0);
+}
+.closed:hover{
+	box-shadow: 0 0 21px rgb(255, 0, 0);
+}
 .yellow:hover{
 	box-shadow: 0 0 21px #ffdc00;
 }
