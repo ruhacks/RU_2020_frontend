@@ -27,6 +27,21 @@
 	font-weight: normal;
 	cursor: pointer;
 }
+
+#sponsorBut{
+	margin: 0 auto;
+}
+
+#BLM{
+	background: #0009134f;
+	box-shadow: 16px 13px #141414;
+}
+
+#statementLetter{
+	width:50%;
+	margin: 0 auto;
+}
+
 .yellow{
 	box-shadow: 0 0 15px #ffdc00;
 }
@@ -140,7 +155,7 @@
 }
 
 .sponsorContainer{
-    text-align: center;
+	text-align: center;
 }
 /*#004c94*/
 #faq {
@@ -371,7 +386,8 @@ iframe{
 	}
 
 	body {
-		background: #141414;
+		/*background: #141414;*/
+		background: black;
 	}
 
 	body, input, select, textarea {
@@ -3206,7 +3222,8 @@ iframe{
 	#header {
 		/*background: #444;*/
         /*background: #001a33;*/
-        background: #001a33;
+		/*background: #001a33;*/
+		background-color: black;
 		color: #bbb;
 		cursor: default;
 		height: 3.25em;
@@ -3437,8 +3454,8 @@ iframe{
 
 	#banner {
 		background-attachment: scroll, fixed, fixed;
-		background-color: #666;
-		background-image: url("images/overlay.png"), url("../../images/banner.svg");
+		background-color: black;
+		/*background-image: url("images/overlay.png"), url("../../images/banner.svg");*/
 		background-position: top left, center center, center center;
 		background-repeat: repeat, no-repeat, no-repeat;
 		background-size: auto, cover, cover;

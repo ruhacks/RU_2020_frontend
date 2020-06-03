@@ -40,12 +40,15 @@
 		<script>
 			var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
 			var head = document.getElementsByTagName('HEAD')[0];
-			
+			if(true){
+				document.getElementById("theme").href="assets/css/main_dark.css?v=3"
+			}
+			/*
 			if(cookieValue == "light"){
 				document.getElementById("theme").href="assets/css/main.css?v=2"
 			}else{
 				document.getElementById("theme").href="assets/css/main_dark.css"
-			}
+			}*/
 		</script>
 		<link rel="icon" href="favicon.ico">
 	</head>
@@ -90,11 +93,11 @@
 							
 							<li>
 								<div id = "navButtons">
-									<a id = "themeBut" class = "button" href="https://ruhacks.com/assets/rules.pdf"> Hackathon Rules</a>
-								<a id="themeBut" class="button" onclick = 'changeThemeState()' chosen ="d">Change Theme</a>
+									<a id = "themeBut" class = "button" href="https://ruhacks.com/assets/rules.pdf" style="display: none;"> Hackathon Rules</a>
+								<a id="themeBut" class="button" onclick = 'changeThemeState()' chosen ="d" style="display: none;">Change Theme</a>
 								
 									<a id="mlh-trust-badge" style="max-width:100px;min-width:60px;top:0;width:10%;z-index:10000;border:none" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=blue" target="_blank" rel="noopener">
-										<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-white.svg" alt="Major League Hacking 2020 Hackathon Season" style="height: 150px">
+										<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-black.svg" alt="Major League Hacking 2020 Hackathon Season" style="height: 150px">
 									</a>
 								</div>
 							</li>
@@ -106,15 +109,25 @@
 			<!-- Banner -->
 				<section id="banner">
 					<div id = "banner_content">
-						<div class = 'logo mainTitle' data-aos="zoom-in">
-							<img id = "bannerLogo" src="images/RU_RGB.svg" alt = "RU Hacks">
-						</div>
 						
-						<h2 class = "mainTitle" data-aos="zoom-in" data-aos-duration="2000">RU Hacks 2020</h2>
+						
+						<!--<h2 class = "mainTitle" data-aos="zoom-in" data-aos-duration="2000" style="color:white">RU Hacks 2020</h2>-->
 						<!-- <p class = "mainTitle"  data-aos="zoom-in" data-aos-duration="2000" >Virtual Hackathon!</p>
 						<p class = "mainTitle" data-aos="zoom-in" data-aos-duration="2000" >May 15-17</p> -->
-						<p class = "mainTitle" data-aos="zoom-in" data-aos-duration="2000" style="margin-bottom:1.5em;font-weight: bold;">That's all folks!</p>
-						<p class = "mainTitle" data-aos="zoom-in" data-aos-duration="2000" style="margin-bottom:1.5em;font-weight: bold;">See you next year!</p>
+						<div id ="statementLetter">
+							<p class = "mainTitle" style="margin-bottom:1.5em;color:white">To our community, </p>
+							<p class = "mainTitle" style="margin-bottom:1.5em;color:white">The recent unlawful and unjust killings of unarmed black individuals like George Floyd, Amari Boone, Ahmuad Arbery and many others have left us feeling distraught.</p>
+							<p class = "mainTitle" style="margin-bottom:1.5em;color:white">RU Hacks as an organization values diversity in all forms and stands in strong support of the Global and Canadian Black Lives Matter Movement. In trying times like these, it is important to know that your voice matters. This is the time to learn, listen and reach out to your community and see how you can be of service in any way possible.</p>
+							<p class = "mainTitle" style="margin-bottom:1.5em;color:white">Education is one of the first steps in combating any sort of injustice. We urge our community to refer to <a href="https://linktr.ee/blacklivesmatter?fbclid=IwAR1OrLXIoL9dKPRKyoJMiw0C7K9fBcil1bH0KzNB0WI8QxJhiWGolrzBKSQ" style="color:rgb(253,239,29);">this link</a> to find ways you can help keep the Black Lives Movement alive so we can all come together and create change.</p>
+							<p class = "mainTitle" style="margin-bottom:1.5em;color:white">As Martin Luther King Jr once said, <text style="font-weight: bold;">“Injustice anywhere is a threat to justice everywhere.” </text>It is time to come together and create a future where #BlackLivesMatter.</p>
+							<p class = "mainTitle" style="margin-bottom:1.5em;color:white">Sincerely,</p>
+							<p class = "mainTitle" style="margin-bottom:1.5em;color:white">The RU Hacks 2020 Executive Team</p>
+						</div>
+
+						<div class = 'logo mainTitle'>
+							<!--<img id = "bannerLogo" src="images/RU_RGB.svg" alt = "RU Hacks">-->
+							<img id = "bannerLogo" src="images/RU_White_RU.png" alt = "RU Hacks">
+						</div>
 
 						<div id ="divButtonsBelow">
 							<!-- <a id="hackers" class = "closed themeBut" data-aos="zoom-in" data-aos-duration="2000" href="https://app.ruhacks.com" style="font-weight: bold;margin-right:1em;">Application Portal</a> -->
@@ -125,6 +138,7 @@
 						</ul>
 					</div>
 				</section>
+
 
 			<header id= 'title' class="major" data-aos="fade-up" data-aos-duration= "500">
 				<h2>Our beautiful organizing team</h2>
@@ -329,7 +343,7 @@
 					<div id='schedule-more-details'></div>
 				</div>
 				</section>-->
-
+<!--
 				<div id ="calendar" style = "text-align: center;margin-bottom: 4em;">
 					
 					<iframe data-aos="fade-up" data-aos-duration= "500" id = 'gcal' zone = 'tz' src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%237986CB&amp;src=aHBndTg4MnIxYWVsYW0wMHAwcDE4ODg5NmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000&amp;mode=AGENDA&amp;title=RU%20Hacks&amp;showTitle=0&amp;showNav=0&amp;showDate=1&amp;showTabs=0&amp;showCalendars=0&amp;showTz=1&amp;ctz=America/Toronto" style="border:solid 1px #777" width="600" height="600" frameborder="0" scrolling="no"></iframe>
@@ -338,11 +352,18 @@
 						<a id="tzBut" data-aos="fade-up" data-aos-duration= "500" class="pink themeBut" onclick = 'changeTimeZone()'>Change to Hacakthon Time Zone (TORONTO/EST)</a>
 					</div>
 				</div>
+				<br><`br>-->
+				<!--
+				<div id = "psponsorsp" style="text-align: center;margin-bottom: 4em;">
+					<div id="divButtonsBelow">
+						<a id="dispSponsorsBut" data-aos="fade-up" data-aos-duration= "500" class="themeBut" displayed="f" onclick = 'displaySponsorContainer()'>Hide past sponsors and partners</a>
+					</div>
+				</section>-->
 				<br><br>
-
 				<section class = "sponsorContainer">
+					
 					<header class="major" data-aos="fade-up" data-aos-duration= "500">
-						<h2>Sponsors & Partners</h2>
+						<h2>Past Sponsors & Partners</h2>
 					</header>
 					<div class = "adContainer">
 						<div class = "headlineSponsor sponsor" data-aos="zoom-in" data-aos-duration="2000">
@@ -464,7 +485,7 @@
 						</div>
 					</div>
 				</section>
-
+				<br><br>
 <!--
 				<section class = "sponsorContainer">
 					<header class="major" data-aos="fade-up" data-aos-duration= "500">
@@ -652,6 +673,19 @@
 				//TODO
 				function setCalendarColors(){
 
+				}
+
+				function displaySponsorContainer(){
+					if($("#dispSponsorsBut").attr("displayed") == "f"){
+						console.log($(".sponsorContainer"));
+						$(".sponsorContainer").css("display","block");
+						$("#dispSponsorsBut").text("Hide past sponsors and partners")
+						$("#dispSponsorsBut").attr("displayed","t");
+					}else{
+						$(".sponsorContainer").css("display","none");
+						$("#dispSponsorsBut").text("Display past sponsors and partners")
+						$("#dispSponsorsBut").attr("displayed","f");
+					}
 				}
 //src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%237986CB&amp;ctz=America%2FToronto&amp;src=aHBndTg4MnIxYWVsYW0wMHAwcDE4ODg5NmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000&amp;mode=AGENDA&amp;title=RU%20Hacks&amp;showTitle=0&amp;showNav=0&amp;showDate=1&amp;showTabs=0&amp;showCalendars=0&amp;showTz=1"
 			</script>
