@@ -17,6 +17,52 @@
 }
 */
 
+#mailchimp_list{
+	background-color: #004c94;
+	width: 25%;
+	margin: 0 auto;
+	padding: 25px;
+	box-shadow: 0 0 15px #554a00;
+
+	
+}
+
+
+#mailchimp_list p{
+	color:white;
+	font-size: 16px !important;
+}
+
+.asterisk{
+	color: red;
+}
+
+.mc-field-group label{
+	color: white !important;
+	text-align: left;
+	margin: 0;
+}
+
+#label_title{
+	text-align:center;
+	font-size: 25px;
+	margin-bottom: 1em;
+}
+
+
+
+.mc-field-group{
+	margin-bottom: 1em;
+}
+
+.indicates-required{
+	color:white;
+	text-align: end;
+	margin-bottom: 1em;
+	width:100%;
+}
+
+
 .themeBut{
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.8);
@@ -27,21 +73,6 @@
 	font-weight: normal;
 	cursor: pointer;
 }
-
-#sponsorBut{
-	margin: 0 auto;
-}
-
-#BLM{
-	background: #0009134f;
-	box-shadow: 16px 13px #141414;
-}
-
-#statementLetter{
-	width:50%;
-	margin: 0 auto;
-}
-
 .yellow{
 	box-shadow: 0 0 15px #ffdc00;
 }
@@ -155,7 +186,7 @@
 }
 
 .sponsorContainer{
-	text-align: center;
+    text-align: center;
 }
 /*#004c94*/
 #faq {
@@ -352,12 +383,6 @@ iframe{
 		padding: 0;
 	}
 
-	input, select, textarea {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-	}
 
 /* Basic */
 
@@ -386,8 +411,7 @@ iframe{
 	}
 
 	body {
-		/*background: #141414;*/
-		background: black;
+		background: #141414;
 	}
 
 	body, input, select, textarea {
@@ -2436,7 +2460,6 @@ iframe{
 		padding: 0.75em 1em;
 	}
 
-	input[type="checkbox"],
 	input[type="radio"] {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -2450,7 +2473,6 @@ iframe{
 		z-index: -1;
 	}
 
-		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
 			color: #777;
@@ -2463,7 +2485,6 @@ iframe{
 			position: relative;
 		}
 
-			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
@@ -2477,7 +2498,6 @@ iframe{
 				font-weight: 900;
 			}
 
-			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
 				background: #f8f8f8;
 				border-radius: 6px;
@@ -2494,7 +2514,6 @@ iframe{
 				width: 2.25em;
 			}
 
-		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
 			background: #666;
 			border-color: #666;
@@ -2502,15 +2521,11 @@ iframe{
 			content: '\f00c';
 		}
 
-		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
 			border-color: #e89980;
 			box-shadow: 0 0 0 1px #e89980;
 		}
 
-	input[type="checkbox"] + label:before {
-		border-radius: 6px;
-	}
 
 	input[type="radio"] + label:before {
 		border-radius: 100%;
@@ -3222,8 +3237,7 @@ iframe{
 	#header {
 		/*background: #444;*/
         /*background: #001a33;*/
-		/*background: #001a33;*/
-		background-color: black;
+        background: #001a33;
 		color: #bbb;
 		cursor: default;
 		height: 3.25em;
@@ -3454,8 +3468,8 @@ iframe{
 
 	#banner {
 		background-attachment: scroll, fixed, fixed;
-		background-color: black;
-		/*background-image: url("images/overlay.png"), url("../../images/banner.svg");*/
+		background-color: #666;
+		background-image: url("images/overlay.png"), url("../../images/banner.svg");
 		background-position: top left, center center, center center;
 		background-repeat: repeat, no-repeat, no-repeat;
 		background-size: auto, cover, cover;
