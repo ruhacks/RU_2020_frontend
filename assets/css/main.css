@@ -16,6 +16,53 @@
 	height: 25%;
 }
 */
+#mailchimp_list{
+	background-color: #004c94;
+	width: 25%;
+	margin: 0 auto;
+	padding: 25px;
+	box-shadow: 0 0 15px #554a00;
+
+	
+}
+
+.wpcc-message{
+	font-size: 26px !important;
+}
+
+#mailchimp_list p{
+	color:white;
+	font-size: 20px !important;
+}
+
+.asterisk{
+	color: red;
+}
+
+.mc-field-group label{
+	color: white !important;
+	text-align: left;
+	margin: 0;
+}
+
+#label_title{
+	text-align:center;
+	font-size: 25px;
+	margin-bottom: 1em;
+}
+
+
+
+.mc-field-group{
+	margin-bottom: 1em;
+}
+
+.indicates-required{
+	color:white;
+	text-align: end;
+	margin-bottom: 1em;
+	width:100%;
+}
 
 .themeBut{
 	text-decoration: none;
@@ -325,12 +372,6 @@ iframe{
 		padding: 0;
 	}
 
-	input, select, textarea {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-	}
 
 /* Basic */
 
@@ -2408,7 +2449,7 @@ iframe{
 		padding: 0.75em 1em;
 	}
 
-	input[type="checkbox"],
+	
 	input[type="radio"] {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -2422,7 +2463,7 @@ iframe{
 		z-index: -1;
 	}
 
-		input[type="checkbox"] + label,
+		
 		input[type="radio"] + label {
 			text-decoration: none;
 			color: #777;
@@ -2435,7 +2476,7 @@ iframe{
 			position: relative;
 		}
 
-			input[type="checkbox"] + label:before,
+			
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
@@ -2449,7 +2490,7 @@ iframe{
 				font-weight: 900;
 			}
 
-			input[type="checkbox"] + label:before,
+			
 			input[type="radio"] + label:before {
 				background: #f8f8f8;
 				border-radius: 6px;
@@ -2466,7 +2507,7 @@ iframe{
 				width: 2.25em;
 			}
 
-		input[type="checkbox"]:checked + label:before,
+		
 		input[type="radio"]:checked + label:before {
 			background: #666;
 			border-color: #666;
@@ -2474,15 +2515,11 @@ iframe{
 			content: '\f00c';
 		}
 
-		input[type="checkbox"]:focus + label:before,
+		
 		input[type="radio"]:focus + label:before {
 			border-color: #e89980;
 			box-shadow: 0 0 0 1px #e89980;
 		}
-
-	input[type="checkbox"] + label:before {
-		border-radius: 6px;
-	}
 
 	input[type="radio"] + label:before {
 		border-radius: 100%;
