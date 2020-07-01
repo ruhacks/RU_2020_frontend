@@ -26,6 +26,22 @@
 	
 }
 
+#mc-embedded-subscribe{
+	background:#7d009c !important
+}
+
+#mc-embedded-subscribe:hover{
+	box-shadow: 0 0 15px #ffdc00 !important;
+
+}
+
+@media screen and (max-width: 1000px){
+	#mailchimp_list{
+		width:50%;
+	}
+}
+
+
 .wpcc-message{
 	font-size: 26px !important;
 }
@@ -51,11 +67,6 @@
 	margin-bottom: 1em;
 }
 
-#mc-embedded-subscribe:hover{
-	background-color: #7d009c28 !important;
-	box-shadow: 0 0 15px #ffdc00 !important;
-
-}
 
 .mc-field-group{
 	margin-bottom: 1em;
@@ -100,12 +111,16 @@
 }
 
 @media screen and (max-width: 450px){
+	/*
 	.themeBut{
 		font-weight: bold;
 		position: absolute;
 		width: 100%;
 		left: 0;
 		top: 0;
+	}*/
+	#mailchimp_list{
+		width:75%;
 	}
 	#hackers{
 		top: 5em;

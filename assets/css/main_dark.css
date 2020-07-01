@@ -27,6 +27,12 @@
 	
 }
 
+@media screen and (max-width: 1000px){
+	#mailchimp_list{
+		width:50%;
+	}
+}
+
 
 #mailchimp_list p{
 	color:white;
@@ -102,13 +108,14 @@
 }
 
 @media screen and (max-width: 450px){
+	/*
 	.themeBut{
 		font-weight: bold;
 		position: absolute;
 		width: 100%;
 		left: 0;
 		top: 0;
-	}
+	}*/
 	#hackers{
 		top: 5em;
 	}
