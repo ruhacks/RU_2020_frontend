@@ -37,6 +37,8 @@
 		<link rel="stylesheet" type = 'text/css' href="assets/css/aos.css" />
 		<link rel="stylesheet" type = 'text/css' href="assets/css/main_dark.css?v=2" id="theme">
 		<!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
+		<script src="https://www.google.com/recaptcha/api.js"></script>
+		
 		<script>
 			var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
 			var head = document.getElementsByTagName('HEAD')[0];
@@ -117,29 +119,22 @@
 						<div id ="mailchimp_list">
 							<!-- Begin Mailchimp Signup Form -->
 							<div id="mc_embed_signup">
-							<form action="https://ruhacks.us20.list-manage.com/subscribe/post?u=ddb63e406cac0b889912cbec0&amp;id=951967b65a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-								<div id="mc_embed_signup_scroll">
-								<h2 style="color: white;font-size:30px">Subscribe Here!</h2>
-							<div class="mc-field-group">
-								<label for="mce-EMAIL">Email Address
-							</label>
-								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+								<form action="https://signup.ruhacks.com/signup" method="POST" target="_self" id="newsletter_signup">
+									<div id="mc_embed_signup_scroll">
+										<h2 style="color: white;font-size:30px">Subscribe Here!</h2>
+										<p id='error' style="font-weight: bold;"></p>
+										<div class="mc-field-group">
+											<label for="mce-EMAIL">Email Address</label>
+											<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color:black">
+										</div>
+										<div class="mc-field-group">
+											<label for="mce-NAME">Name</label>
+											<input type="text" value="" name="NAME" class="required" id="mce-NAME" style="color:black">
+										</div>
+										<button name="hackers" id="mc-embedded-subscribe" class="g-recaptcha pink themeBut" data-sitekey='6LfEMc0ZAAAAAC5y3_NuRtGGzeTM5FArsfYT_eYB' data-callback="onSubmit" data-action= 'submit'>Submit</button>
+									</div>
+								</form>
 							</div>
-							<div class="mc-field-group">
-								<label for="mce-NAME">Name
-							</label>
-								<input type="text" value="" name="NAME" class="required" id="mce-NAME">
-							</div>
-								<div id="mce-responses" class="clear">
-									<div class="response" id="mce-error-response" style="display:none"></div>
-									<div class="response" id="mce-success-response" style="display:none"></div>
-								</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ddb63e406cac0b889912cbec0_951967b65a" tabindex="-1" value=""></div>
-								<div class="clear"><input type="submit" value="Subscribe" name="hackers" id="mc-embedded-subscribe" class="pink themeBut"></div>
-								</div>
-							</form>
-							</div>
-							<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='NAME';ftypes[1]='text';fnames[3]='FNAME';ftypes[3]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 							<!--End mc_embed_signup-->
 
 						</div>
@@ -656,12 +651,85 @@
 						`)
 					}
 				}
-				//TODO
-				function setCalendarColors(){
-					
+				function findGetParameter(parameterName) {
+					var result = null,
+					tmp = [];
+					var items = location.search.substr(1).split("&");
+					for (var index = 0; index < items.length; index++) {
+						tmp = items[index].split("=");
+						if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+					}
+					return result;
 				}
-//src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%237986CB&amp;ctz=America%2FToronto&amp;src=aHBndTg4MnIxYWVsYW0wMHAwcDE4ODg5NmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000&amp;mode=AGENDA&amp;title=RU%20Hacks&amp;showTitle=0&amp;showNav=0&amp;showDate=1&amp;showTabs=0&amp;showCalendars=0&amp;showTz=1"
-			</script>
 
+				function IsReferredFromMe()
+				{
+
+					var ref = document.referrer;
+					console.log(ref)
+					if ((ref == null) || (ref.length == 0)) {
+						return false;
+					}
+					if (ref.indexOf("http://") == 0) {
+						ref = ref.substring(7);
+					}else if(ref.indexOf("https://") == 0) {
+						ref = ref.substring(8);
+					} 
+					ref = ref.toLowerCase();
+
+					var myDomain = document.domain;
+					console.log('myDomain', myDomain)
+					console.log('ref', ref)
+					if ((myDomain == null) || (myDomain.length == 0)) {
+						return false;
+					}
+					if (myDomain.indexOf("http://") == 0 || ref.indexOf("https://") == 0) {
+						myDomain = myDomain.substring(7);
+					}
+					myDomain = myDomain.toLowerCase();
+
+					return ref.indexOf(myDomain) == 0;
+				}
+				
+				function handleRedirect(){
+					if(document.referrer && IsReferredFromMe()){
+						const uEmail = findGetParameter('email')
+						const uName = findGetParameter('name') ? findGetParameter('name').replace("+", " ") : null
+						const already_subscribed = findGetParameter('already_subscribed')
+						const added_subscription = findGetParameter('added_subscription')
+						const unsub = findGetParameter('unsub')
+						const invalidEmail = findGetParameter('invalidEmail')
+
+						if(invalidEmail){
+							$("#error").text("Invalid Email, please try again")
+							$("#error").css("color", "red")
+						}
+
+						if(!uEmail || !uName){
+							return
+						}
+
+						$("input[name='EMAIL']").val(uEmail)
+						$("input[name='NAME']").val(uName)
+
+						if(already_subscribed && already_subscribed === 'True'){
+							$("#error").text("We already know you, but we have made to sure that you are subscribed!")
+							$("#error").css("color","green")
+						}
+						
+						if(added_subscription && added_subscription === 'True'){
+							$("#error").text("You have been subscribed!")
+							$("#error").css("color","green")
+						}
+					}
+				}
+				handleRedirect()
+//src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%237986CB&amp;ctz=America%2FToronto&amp;src=aHBndTg4MnIxYWVsYW0wMHAwcDE4ODg5NmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000&amp;mode=AGENDA&amp;title=RU%20Hacks&amp;showTitle=0&amp;showNav=0&amp;showDate=1&amp;showTabs=0&amp;showCalendars=0&amp;showTz=1"
+			</script> 
+			<script>
+				function onSubmit(token) {
+				  document.getElementById("newsletter_signup").submit();
+				}
+			</script>
 	</body>
 </html>
