@@ -670,12 +670,16 @@
 					if ((ref == null) || (ref.length == 0)) {
 						return false;
 					}
-					if (ref.indexOf("http://") == 0 || ref.indexOf("https://") == 0) {
+					if (ref.indexOf("http://") == 0) {
 						ref = ref.substring(7);
-					}
+					}else if(ref.indexOf("https://") == 0) {
+						ref = ref.substring(8);
+					} 
 					ref = ref.toLowerCase();
 
 					var myDomain = document.domain;
+					console.log('myDomain', myDomain)
+					console.log('ref', ref)
 					if ((myDomain == null) || (myDomain.length == 0)) {
 						return false;
 					}
