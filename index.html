@@ -40,10 +40,10 @@
 		<script src="https://www.google.com/recaptcha/api.js"></script>
 		
 		<script>
-			var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
+			var themeValue = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
 			var head = document.getElementsByTagName('HEAD')[0];
 			
-			if(cookieValue == "light"){
+			if(themeValue == "light"){
 				document.getElementById("theme").href="assets/css/main.css?v=2"
 			}else{
 				document.getElementById("theme").href="assets/css/main_dark.css"
@@ -53,6 +53,36 @@
 	</head>
 	
 	<body class="landing is-preload">
+		
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<!-- Begin Mailchimp Signup Form -->
+			<div id="mc_embed_signup">
+				<form action="https://signup.ruhacks.com/signup" method="POST" target="_self" id="newsletter_signup">
+					<div id="mc_embed_signup_scroll">
+						<h2 style="color: white;font-size:30px">Subscribe Here!</h2>
+						<p id='error' style="font-weight: bold;"></p>
+						<div class="mc-field-group">
+							<label for="mce-EMAIL">Email Address</label>
+							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color:black">
+						</div>
+						<div class="mc-field-group">
+							<label for="mce-NAME">Name</label>
+							<input type="text" value="" name="NAME" class="required" id="mce-NAME" style="color:black">
+						</div>
+						<button name="hackers" id="mc-embedded-subscribe" class="g-recaptcha pink themeBut" data-sitekey='6LfEMc0ZAAAAAC5y3_NuRtGGzeTM5FArsfYT_eYB' data-callback="onSubmit" data-action= 'submit'>Submit</button>
+					</div>
+				</form>
+			</div>
+			<!--End mc_embed_signup-->
+		</div>
+
+		</div>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -93,8 +123,8 @@
 							<li>
 								<div id = "navButtons">
 									<a id = "themeBut" class = "button" href="https://ruhacks.com/assets/rules.pdf"> Hackathon Rules</a>
-								<a id="themeBut" class="button" onclick = 'changeThemeState()' chosen ="d">Change Theme</a>
-								
+									<a id="themeBut" class="button" onclick = 'changeThemeState()' chosen ="d">Change Theme</a>
+									<a id="signupNewsletterBut" class="button newsletter" onclick = 'popupNewsletter(this)'>Subscribe to our newsletter</a>
 									<a id="mlh-trust-badge" style="max-width:100px;min-width:60px;top:0;width:10%;z-index:10000;border:none" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=blue" target="_blank" rel="noopener">
 										<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-white.svg" alt="Major League Hacking 2020 Hackathon Season" style="height: 150px">
 									</a>
@@ -119,7 +149,7 @@
 						<div id ="mailchimp_list">
 							<!-- Begin Mailchimp Signup Form -->
 							<div id="mc_embed_signup">
-								<form action="https://signup.ruhacks.com/signup" method="POST" target="_self" id="newsletter_signup">
+								<form action="http://localhost:5000/signup" method="POST" target="_self" id="newsletter_signup">
 									<div id="mc_embed_signup_scroll">
 										<h2 style="color: white;font-size:30px">Subscribe Here!</h2>
 										<p id='error' style="font-weight: bold;"></p>
@@ -139,11 +169,15 @@
 
 						</div>
 
-
 						<div id ="divButtonsBelow">
 							<!-- <a id="hackers" class = "closed themeBut" data-aos="zoom-in" data-aos-duration="2000" href="https://app.ruhacks.com" style="font-weight: bold;margin-right:1em;">Application Portal</a> -->
 							<!--<a id="mentors" class = "yellow themeBut" data-aos="zoom-in" data-aos-duration="2000" href="https://forms.gle/R4xi3rnYue7JjPXQ6" style="font-weight: bold;">Mentor Sign Ups Here!</a>-->
-					</div>
+							<!-- Calendly link widget begin -->
+							<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+							<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+							<a href="" class="closed themeBut" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ru-hacks-call-n-code-'});return false;">See our upcoming events!</a>
+							<!-- Calendly link widget end -->					
+						</div>
 						<ul class="actions special">
 							<!--<li><a href="#" class="button primary">Sign Up</a></li>-->
 						</ul>
@@ -625,6 +659,7 @@
 				const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
 				const lz = "America/Toronto"
 				var srcText = "https://calendar.google.com/calendar/b/1/embed?height=600&wkst=1&bgcolor=%237986CB&src=aHBndTg4MnIxYWVsYW0wMHAwcDE4ODg5NmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000&mode=AGENDA&title=RU%20Hacks&showTitle=0&showNav=0&showDate=1&showTabs=0&showCalendars=0&showTz=1&ctz="+tz;
+				checkIfWeShouldHideNewsletterSignup()
 
 				function changeTimeZone(){
 					if($("#gcal").attr("zone") == 'tz'){
@@ -703,6 +738,7 @@
 						if(invalidEmail){
 							$("#error").text("Invalid Email, please try again")
 							$("#error").css("color", "red")
+							return
 						}
 
 						if(!uEmail || !uName){
@@ -721,6 +757,8 @@
 							$("#error").text("You have been subscribed!")
 							$("#error").css("color","green")
 						}
+
+						createCookie('removeNewsletter', 'true', 365)
 					}
 				}
 				handleRedirect()
