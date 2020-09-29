@@ -121,6 +121,60 @@ function changeThemeState(){
 	}
 
 }
+
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function checkIfWeShouldHideNewsletterSignup(){
+	var newsletterValue = document.cookie.replace(/(?:(?:^|.*;\s*)removeNewsletter\s*\=\s*([^;]*).*$)|^.*$/, "$1"); 
+
+	if(newsletterValue && newsletterValue === 'true'){
+		const signup = document.getElementById('mailchimp_list')
+		const mainTitle = $('p[class="mainTitle"]')
+		if(signup && mainTitle){
+			signup.style.display = 'none'
+			mainTitle.text('Digital Hackathon')
+		}
+	}else{
+		createCookie('removeNewsletter', 'false', 365)
+	}
+}
+
+function popupNewsletter(butSrc){
+	// Get the modal
+	var modal = document.getElementById("myModal");
+
+	// Get the button that opens the modal
+	var btn = document.getElementById("signupNewsletterBut");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on the button, open the modal
+	if(butSrc === btn) {
+		modal.style.display = "block";
+	}
+	
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+}
 /*
 function embedMap(){
 	if($("#iframeMap").length ==0){
