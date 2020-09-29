@@ -149,7 +149,7 @@
 						<div id ="mailchimp_list">
 							<!-- Begin Mailchimp Signup Form -->
 							<div id="mc_embed_signup">
-								<form action="http://localhost:5000/signup" method="POST" target="_self" id="newsletter_signup">
+								<form action="https://signup.ruhacks.com/signup" method="POST" target="_self" id="newsletter_signup">
 									<div id="mc_embed_signup_scroll">
 										<h2 style="color: white;font-size:30px">Subscribe Here!</h2>
 										<p id='error' style="font-weight: bold;"></p>
@@ -713,8 +713,6 @@
 					ref = ref.toLowerCase();
 
 					var myDomain = document.domain;
-					console.log('myDomain', myDomain)
-					console.log('ref', ref)
 					if ((myDomain == null) || (myDomain.length == 0)) {
 						return false;
 					}
@@ -757,7 +755,6 @@
 							$("#error").text("You have been subscribed!")
 							$("#error").css("color","green")
 						}
-
 						createCookie('removeNewsletter', 'true', 365)
 					}
 				}
