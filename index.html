@@ -63,19 +63,19 @@
 			<span class="close">&times;</span>
 			<!-- Begin Mailchimp Signup Form -->
 			<div id="mc_embed_signup">
-				<form action="https://signup.ruhacks.com/signup" method="POST" target="_self" id="newsletter_signup">
+				<form action="https://signup.ruhacks.com/signup" method="POST" target="_self" id="newsletter_signup_NAV">
 					<div id="mc_embed_signup_scroll">
 						<h2 style="color: white;font-size:30px">Subscribe Here!</h2>
 						<p id='error' style="font-weight: bold;"></p>
 						<div class="mc-field-group">
 							<label for="mce-EMAIL">Email Address</label>
-							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color:black">
+							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL_UP" style="color:black"/>
 						</div>
 						<div class="mc-field-group">
 							<label for="mce-NAME">Name</label>
-							<input type="text" value="" name="NAME" class="required" id="mce-NAME" style="color:black">
+							<input type="text" value="" name="NAME" class="required" id="mce-NAME_UP" style="color:black"/>
 						</div>
-						<button name="hackers" id="mc-embedded-subscribe" class="g-recaptcha pink themeBut" data-sitekey='6LfEMc0ZAAAAAC5y3_NuRtGGzeTM5FArsfYT_eYB' data-callback="onSubmit" data-action= 'submit'>Submit</button>
+						<button name="hackers" id="mc-embedded-subscribe" class="g-recaptcha pink themeBut" data-sitekey='6LfEMc0ZAAAAAC5y3_NuRtGGzeTM5FArsfYT_eYB' data-callback="onSubmitUP" data-action= 'submit'>Submit</button>
 					</div>
 				</form>
 			</div>
@@ -764,6 +764,9 @@
 			<script>
 				function onSubmit(token) {
 				  document.getElementById("newsletter_signup").submit();
+				}
+				function onSubmitUP(token){
+					document.getElementById("newsletter_signup_NAV").submit();
 				}
 			</script>
 	</body>
