@@ -4,8 +4,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-var themeState = 1;
-
 (function($) {
 
 	var	$window = $(window),
@@ -89,38 +87,7 @@ var themeState = 1;
 
 })(jQuery);
 
-determineThemeState();
-function determineThemeState(){
-	var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-	if(cookieValue == "light"){
-		$("#themeBut").attr("chosen", "l");
-		$("img[id='navLogo']").attr("src", "images/RU_White_RU.png").attr("alt", "RU Hacks");
-	}else if(cookieValue == "dark"){
-		$("#themeBut").attr("chosen", "d");
-		$("img[id='navLogo']").attr("src", "images/RU_White_RU.png").attr("alt", "RU Hacks");
-	}else{
-		var expiry = new Date();
-		expiry.setTime(expiry.getTime() + (365*24*60*60*1000));
-		document.cookie = "theme=light;";
-		document.cookie = "expires="+expiry.toUTCString();
-	}
-}
 
-function changeThemeState(){
-	var chosen = $("#themeBut").attr("chosen");
-	if(chosen == "l"){
-		$("a[id='themeBut']").attr("chosen", "d");
-		document.cookie = "theme=dark;";
-		$("#theme").attr("href", "assets/css/main_dark.css?v=3");
-		$("img[id='navLogo']").attr("src", "images/RU_White_RU.png").attr("alt", "RU Hacks");
-	}else if(chosen == "d"){
-		$("a[id='themeBut']").attr("chosen", "l");
-		document.cookie = "theme=light;";
-		$("#theme").attr("href", "assets/css/main.css?v=3");
-		$("img[id='navLogo']").attr("src", "images/RU_White_RU.png").attr("alt", "RU Hacks");
-	}
-
-}
 
 function createCookie(name,value,days) {
     if (days) {
