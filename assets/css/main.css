@@ -17,6 +17,11 @@
 }
 */
 
+.sponsorContainer{
+	background-image: url('../../images/AGO.svg');
+	background-repeat: no-repeat;
+}
+
 
 section, #page_wrapper{
 	overflow-x: hidden;
@@ -48,21 +53,6 @@ section, #page_wrapper{
 	overflow-y: hidden;
 }
 
-#DSQ {
-	pointer-events: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-	z-index: 1000;
-	object-fit: cover;
-	overflow: hidden;
-	float: right;
-}
-
-#SLC {
-    position: absolute;
-
-}
 
 .lines{
 	pointer-events: none;
@@ -304,11 +294,17 @@ section, #page_wrapper{
 	align-content: center;
 	width: 90%;
 	margin: 0 auto;
+	background-color: white;
 }
 /*#004c94*/
 #faq {
 	max-width: none;
-	padding: 2em 2em 2em 2em;
+	padding: 2em 2em 20em 6em;
+	background-image: url('../../images/NPS.svg');
+	background-repeat: no-repeat;
+	background-position-y: bottom;
+	background-position-x: right;
+	background-size: cover;
 }
 
 #info{
